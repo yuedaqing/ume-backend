@@ -52,6 +52,16 @@ spring:
   #        max-active: 8
   #        # #连接池最大阻塞等待时间（使用负值表示没有限制）
   #        max-wait: -1ms
+  #swagger3配置
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+# Swagger配置
+swagger:
+  # 是否开启swagger
+ enabled: true
+  # 请求前缀
+  #pathMapping: /dev-api
 # MyBatisPlus配置
 # https://baomidou.com/config/
 mybatis-plus:
