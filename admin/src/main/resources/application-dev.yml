@@ -4,7 +4,7 @@ spring:
     name: project
   datasource:
     username: root  #账户
-    password: yueyue  #密码
+    password: 123456  #密码
     url: jdbc:mysql://localhost:3306/yueyue #数据库连接地址
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
