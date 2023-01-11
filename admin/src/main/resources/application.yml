@@ -56,6 +56,31 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+#rabbitMQ配置
+#消息队列
+  rabbitmq:
+    host: 43.143.143.143
+    port: 5672
+    #虚拟host 可以不设置,使用server默认host
+    #virtual-host: /env-dev
+    password: admin
+    username: admin
+    #前端js连接端口
+    stompport: 61613
+    #开启手动确认消息
+    listener:
+      simple:
+        #  采用手动应答
+        acknowledge-mode: manual
+    #开启confirmCallback
+    publisher-confirm-type: correlated
+    #开启returnCallback配置
+    publisher-returns: true
+    #修改交换机投递到队列失败的策略
+    template:
+      mandatory: true
+  main:
+    allow-bean-definition-overriding: true
 # Swagger配置
 swagger:
   # 是否开启swagger
