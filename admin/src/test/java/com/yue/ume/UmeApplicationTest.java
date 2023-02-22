@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UmeApplicationTests {
+public class UmeApplicationTest {
 
     @Test
-    void contextLoads() {
+    public void fun(){
+        System.out.println("12321312321");
     }
-
 }

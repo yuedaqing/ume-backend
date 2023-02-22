@@ -25,7 +25,8 @@ spring:
   # redis 配置
   redis:
     # 地址
-    host: 47.94.206.225
+#    host: 47.94.206.225
+    host: 43.143.143.143
     #host: 192.168.1.105
     # 端口，默认为6379
     port: 6379
@@ -59,6 +60,7 @@ spring:
 #rabbitMQ配置
 #消息队列
   rabbitmq:
+#    host: 43.143.143.143
     host: 43.143.143.143
     port: 5672
     #虚拟host 可以不设置,使用server默认host
@@ -72,11 +74,11 @@ spring:
       simple:
         #  采用手动应答
         acknowledge-mode: manual
-    #开启confirmCallback
+    #开启confirmCallback 生产者到broker的交换机——消息二次确认
     publisher-confirm-type: correlated
-    #开启returnCallback配置
+    #开启returnCallback配置 交换机到队列的可靠性投递——消息二次确认
     publisher-returns: true
-    #修改交换机投递到队列失败的策略
+    #修改交换机投递到队列失败的策略  true:交换机处理消息到路由失败，返回给生产者
     template:
       mandatory: true
   main:
@@ -90,11 +92,11 @@ swagger:
 # MyBatisPlus配置
 # https://baomidou.com/config/
 mybatis-plus:
-  mapperPackage: com.czo.**.mapper
+  mapperPackage: com.yue.**.mapper
   # 对应的 XML 文件位置
   mapperLocations: classpath*:mapper/**/*Mapper.xml
   # 实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.czo.**.domain
+  typeAliasesPackage: com.yue.**.domain
   # 针对 typeAliasesPackage，如果配置了该属性，则仅仅会扫描路径下以该类作为父类的域对象
   #typeAliasesSuperType: Class<?>
   # 如果配置了该属性，SqlSessionFactoryBean 会把该包下面的类注册为对应的 TypeHandler

@@ -1,6 +1,6 @@
 package com.yue.ume.redis;
 
-import com.yue.ume.domain.User;
+import com.yue.ume.model.domain.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +19,7 @@ public class lettuceDemo {
         List<User> users = new ArrayList<>();
         User user = new User();
         user.setUserName("赵丽颖");
-        user.setAccount("1888888888");
+        user.setUserAccount("1888888888");
         users.add(user);
         //写入一条String数据
         redisTemplate.opsForValue().set("yue:user",users);

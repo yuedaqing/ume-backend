@@ -1,8 +1,8 @@
-package com.yue.ume.jedis;
+package com.yue.ume.redis.jedis;
 
 import com.google.gson.Gson;
-import com.yue.ume.config.JedisConfig;
-import com.yue.ume.domain.User;
+import com.yue.ume.model.domain.User;
+import com.yue.ume.redis.config.JedisConfig;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -31,8 +31,8 @@ public class JedisDemo {
         List<User> users = new ArrayList<>();
         User user = new User();
         user.setUserName("xiaobai");
-        user.setGender("2");
-        user.setAccount("18832133213");
+        user.setGender(2);
+        user.setUserAccount("18832133213");
         users.add(user);
         Gson gson = new Gson();
         String userJson = gson.toJson(users);

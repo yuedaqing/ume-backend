@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 /**
+ * redis工具类
  * @author YueYue
  */
 public class RedisUtils {
@@ -24,6 +25,13 @@ public class RedisUtils {
         stringRedisTemplate.opsForValue().set(key, JSONUtil.toJsonStr(value),time,unit);
     }
 
+    /**
+     *
+     * @param key redis_key
+     * @param value 缓存的值
+     * @param time 缓存时间
+     * @param unit 缓存时间单位
+     */
     public void setWithLogicalExpire(String key, Object value, Long time, TimeUnit unit) {
         //设置逻辑过期
         RedisData redisData = new RedisData();
@@ -33,6 +41,19 @@ public class RedisUtils {
         stringRedisTemplate.opsForValue().set(key, JSONUtil.toJsonStr(redisData), time, unit);
     }
 
+    /**
+     *
+     * @param keyPrefix redis_key
+     * @param id 查询的主键
+     * @param type 返回类型
+     * @param dbFallBack sql回调
+     * @param time 缓存时间
+     * @param unit 缓存时间单位
+     * @param <R> 返回类型
+     * @param <ID> ID类型
+     * @param <T>  无
+     * @return
+     */
     public <R,ID,T> R queryWithPassThrough(String keyPrefix, ID id, Class<R> type, Function<ID,R> dbFallBack,Long time ,TimeUnit unit){
         String key = keyPrefix+id;
         //从redis中查询缓存

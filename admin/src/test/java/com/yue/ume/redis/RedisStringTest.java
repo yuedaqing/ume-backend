@@ -2,7 +2,7 @@ package com.yue.ume.redis;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yue.ume.domain.User;
+import com.yue.ume.model.domain.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,7 +20,7 @@ public class RedisStringTest {
     private static final ObjectMapper mapper = new ObjectMapper();
 
     /**
-     * string 的使用
+     * Redis_String 的使用
      * @throws JsonProcessingException
      */
     @Test
@@ -28,7 +28,7 @@ public class RedisStringTest {
         List<User> users = new ArrayList<>();
         User user = new User();
         user.setUserName("杨幂");
-        user.setAccount("1878888888");
+        user.setUserAccount("1878888888");
         users.add(user);
         //手动序列化
         String json = mapper.writeValueAsString(users);
@@ -41,7 +41,7 @@ public class RedisStringTest {
         System.out.println("arrayList = " + arrayList);
     }
     /**
-     * hash 使用
+     * Redis_Hash 使用
      */
     @Test
     void testHash(){

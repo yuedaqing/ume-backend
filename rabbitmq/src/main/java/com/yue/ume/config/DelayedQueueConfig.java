@@ -36,7 +36,7 @@ public class DelayedQueueConfig {
      */
     @Bean
     public CustomExchange delayedExchange(){
-        Map<String, Object> arguments = new HashMap<>();
+        Map<String, Object> arguments = new HashMap<String, Object>(8);
         //延迟类型  直接类型
         arguments.put("x-delayed-type","direct");
         /**

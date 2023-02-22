@@ -1,4 +1,4 @@
-package com.yue.ume.config;
+package com.yue.ume.redis.config;
 
 
 import redis.clients.jedis.Jedis;
@@ -22,7 +22,7 @@ public class JedisConfig {
         jedisPoolConfig.setMinIdle(0);
         //最长等待时间
         jedisPoolConfig.setMaxWaitMillis(500);
-        JEDIS_POOL = new JedisPool(jedisPoolConfig,"47.94.206.225",6379,500,"123456");
+        JEDIS_POOL = new JedisPool(jedisPoolConfig,"43.143.143.143",6379,500,"123456");
     }
     public static Jedis getJedis(){
         return JEDIS_POOL.getResource();
