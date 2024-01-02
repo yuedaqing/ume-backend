@@ -1,7 +1,7 @@
 package com.yue.ume.model.mapper;
 
-import com.yue.ume.model.domain.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.yue.ume.model.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

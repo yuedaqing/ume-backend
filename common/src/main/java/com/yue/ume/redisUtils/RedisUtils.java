@@ -2,7 +2,6 @@ package com.yue.ume.redisUtils;
 
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
-import com.google.gson.Gson;
 import com.yue.ume.domain.RedisData;
 import org.springframework.data.redis.core.StringRedisTemplate;
 

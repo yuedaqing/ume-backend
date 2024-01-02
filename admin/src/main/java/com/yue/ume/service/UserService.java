@@ -1,7 +1,7 @@
 package com.yue.ume.service;
 
-import com.yue.ume.model.domain.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.yue.ume.model.domain.User;
 
 /**
 * @author YueYue

@@ -31,7 +31,7 @@ public class DelayedQueueConfig {
     public static final String DELAYED_ROUTING_KEY = "delayed.routingKey";
 
     /**
-     * 生命交换机
+     * 延迟交换机
      * @return org.springframework.amqp.core.CustomExchange
      */
     @Bean
