@@ -11,10 +11,10 @@
         <module>admin</module>
         <module>framework</module>
         <module>common</module>
-        <module>java_practice</module>
-        <module>rabbitmq</module>
-        <module>redis</module>
-        <module>juc</module>
+        <module>aop-demo</module>
+        <module>rabbitmq-demo</module>
+        <module>redis-demo</module>
+        <module>juc-demo</module>
         <module>netty-demo</module>
     </modules>
 
