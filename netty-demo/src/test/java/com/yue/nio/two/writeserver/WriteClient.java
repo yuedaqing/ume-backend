@@ -1,4 +1,4 @@
-package com.yue.netty.two.writeserver;
+package com.yue.nio.two.writeserver;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;

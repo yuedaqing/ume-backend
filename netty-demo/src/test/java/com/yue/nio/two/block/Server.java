@@ -1,10 +1,9 @@
-package com.yue.netty.two.nonblock;
+package com.yue.nio.two.block;
 
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.net.ServerSocket;
 import java.nio.ByteBuffer;
 import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
@@ -22,7 +21,6 @@ public class Server {
 
         //1. 创建服务器
         ServerSocketChannel ssc = ServerSocketChannel.open();
-        ssc.configureBlocking(false);//开启非阻塞模式
         //2. 绑定监听端口
         ssc.bind(new InetSocketAddress(8080));
 
@@ -34,7 +32,6 @@ public class Server {
             SocketChannel sc = ssc.accept(); //阻塞方法，线程停止运行
             log.info("connected…………");
             channels.add(sc);
-            sc.configureBlocking(false);
 
             for (SocketChannel channel : channels) {
                 //5. 接收客户端发送的数据
