@@ -32,6 +32,7 @@
 		</encoder>
 	</appender>
 	<logger name="com.yue.netty" level="DEBUG"/>
+	<logger name="io.netty.handler.logging.LoggingHandler" level="DEBUG"/>
 	<!-- Log file error output -->
 	<appender name="error" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>${log.path}/error.log</file>
