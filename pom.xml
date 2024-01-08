@@ -16,6 +16,7 @@
         <module>redis-demo</module>
         <module>juc-demo</module>
         <module>netty-demo</module>
+        <module>vertx-demo</module>
     </modules>
 
     <properties>
