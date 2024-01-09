@@ -19,13 +19,13 @@
 
         <dependency>
             <groupId>com.yue</groupId>
-            <artifactId>redis</artifactId>
+            <artifactId>redis-demo</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>com.yue</groupId>
-            <artifactId>rabbitmq</artifactId>
+            <artifactId>rabbitmq-demo</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
