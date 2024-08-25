@@ -9,7 +9,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 /**
- * @author YueYue
+ * @author yueyue
  * 基于插件的延迟消息
  */
 @Slf4j

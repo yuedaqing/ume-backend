@@ -11,7 +11,7 @@ import java.util.function.Function;
 
 /**
  * redis工具类
- * @author YueYue
+ * @author yueyue
  */
 public class RedisUtils {
     private StringRedisTemplate stringRedisTemplate;

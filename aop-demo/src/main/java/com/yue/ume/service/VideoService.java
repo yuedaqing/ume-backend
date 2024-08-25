@@ -1,7 +1,7 @@
 package com.yue.ume.service;
 
 /**
- * @author YueYue
+ * @author yueyue
  */
 public interface VideoService {
     String beforeAdvice(String beforeName);

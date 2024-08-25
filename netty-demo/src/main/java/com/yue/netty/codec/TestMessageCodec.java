@@ -15,7 +15,7 @@ public class TestMessageCodec {
                 new LengthFieldBasedFrameDecoder(1024,12,4,0,0),
                 //线程安全，可以被共享
                 new LoggingHandler(LogLevel.DEBUG),
-                new MessageCodec());
+                new MessageCodecSharable());
         LoginRequestMessage message = new LoginRequestMessage();
         message.setUsername("zhangsan");
         message.setPassword("123456");

@@ -1,15 +1,14 @@
 package com.yue.ume.model.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.yue.ume.model.domain.User;
+import com.yue.ume.model.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
-* @author YueYue
-* @description 针对表【user(用户)】的数据库操作Mapper
-* @createDate 2023-02-17 10:43:34
-* @Entity generator.domain.User
-*/
+ * 用户Mapper
+ *
+ * @author yueyue
+ */
 @Mapper
 public interface UserMapper extends BaseMapper<User> {
 

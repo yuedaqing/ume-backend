@@ -9,7 +9,7 @@ public class TestFilesWalkFileTree {
     public static void main(String[] args) throws IOException {
         m1();
         m2();
-//        Files.delete(Paths.get("C:\\Users\\YueYue\\Desktop\\带删除"));
+//        Files.delete(Paths.get("C:\\Users\\yueyue\\Desktop\\带删除"));
         m3();
     }
 
@@ -74,7 +74,7 @@ public class TestFilesWalkFileTree {
      * @throws IOException
      */
     public static void m3() throws IOException {
-        Files.walkFileTree(Paths.get("C:\\Users\\YueYue\\Desktop\\待删除"), new SimpleFileVisitor<Path>() {
+        Files.walkFileTree(Paths.get("C:\\Users\\yueyue\\Desktop\\待删除"), new SimpleFileVisitor<Path>() {
 
             @Override
             public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {

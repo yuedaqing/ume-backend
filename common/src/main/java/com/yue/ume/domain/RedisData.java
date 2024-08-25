@@ -5,7 +5,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 /**
- * @author YueYue
+ * @author yueyue
  */
 @Data
 public class RedisData {

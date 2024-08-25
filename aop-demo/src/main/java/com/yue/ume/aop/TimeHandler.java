@@ -8,7 +8,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
 /**
- * @author YueYue
+ * @author yueyue
  * 横切关注点
  */
 @Aspect

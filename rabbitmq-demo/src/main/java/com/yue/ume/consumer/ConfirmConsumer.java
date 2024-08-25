@@ -8,7 +8,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 /**
- * @author YueYue
+ * @author yueyue
  */
 @Component
 @Slf4j

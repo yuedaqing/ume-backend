@@ -5,7 +5,7 @@ import com.yue.ume.service.VideoService;
 import org.springframework.stereotype.Service;
 
 /**
- * @author YueYue
+ * @author yueyue
  */
 @Service
 public class VideoServiceImpl implements VideoService {

@@ -2,8 +2,8 @@ package com.yue.netty.client;
 
 
 import com.yue.netty.client.handler.RpcResponseMessageHandler;
+import com.yue.netty.codec.MessageCodecSharable;
 import com.yue.netty.message.RpcRequestMessage;
-import com.yue.netty.protocol.MessageCodecSharable;
 import com.yue.netty.protocol.ProcotolFrameDecoder;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;

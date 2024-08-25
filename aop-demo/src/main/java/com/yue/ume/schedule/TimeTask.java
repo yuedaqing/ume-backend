@@ -3,7 +3,7 @@ package com.yue.ume.schedule;
 import org.springframework.stereotype.Component;
 
 /**
- * @author YueYue
+ * @author yueyue
  */
 @Component
 public class TimeTask {

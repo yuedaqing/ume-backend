@@ -17,6 +17,7 @@
         <module>juc-demo</module>
         <module>netty-demo</module>
         <module>vertx-demo</module>
+        <module>es-demo</module>
     </modules>
 
     <properties>
@@ -25,11 +26,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <druid.version>1.2.8</druid.version>
-        <fastjson.version>1.2.78</fastjson.version>
+        <fastjson2.version>2.0.51</fastjson2.version>
         <mybatis-spring-boot.version>2.2.2</mybatis-spring-boot.version>
+        <mybatis-plus.version>3.4.3.4</mybatis-plus.version>
         <hutool.version>5.8.4</hutool.version>
         <org.redisson.version>3.10.1</org.redisson.version>
-
+        <spring-boot.version>2.7.3</spring-boot.version>
+        <knife.version>3.0.3</knife.version>
+        <lombok.version>1.18.12</lombok.version>
     </properties>
 
     <dependencyManagement>
@@ -50,11 +54,11 @@
                 <version>${ume.version}</version>
             </dependency>
 
-            <!--swagger3-->
+            <!-- https://doc.xiaominfo.com/knife4j/documentation/get_start.html-->
             <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-boot-starter</artifactId>
-                <version>3.0.0</version>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife.version}</version>
             </dependency>
             <!--分布式锁-->
             <dependency>
@@ -82,13 +86,13 @@
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>3.4.3.4</version>
+                <version>${mybatis-plus.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-extension</artifactId>
-                <version>3.4.3.4</version>
+                <version>${mybatis-plus.version}</version>
             </dependency>
 
             <!-- SpringBoot集成mybatis框架 -->
@@ -100,9 +104,9 @@
 
             <!-- 阿里JSON解析器 -->
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
             </dependency>
 
             <!-- hutool依赖 -->
@@ -126,7 +130,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.7.3</version>
+                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -140,5 +144,18 @@
     </dependencyManagement>
 
 
+    <build>
+        <plugins>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -9,8 +9,8 @@ import java.nio.file.Paths;
  */
 public class TestFileCopy {
     public static void main(String[] args) throws IOException {
-        String source = "C:\\Users\\YueYue\\Desktop\\待拷贝";
-        String target = "C:\\Users\\YueYue\\Desktop\\待拷贝2";
+        String source = "C:\\Users\\yueyue\\Desktop\\待拷贝";
+        String target = "C:\\Users\\yueyue\\Desktop\\待拷贝2";
         Files.walk(Paths.get(source)).forEach(path -> {
             try {
                 String targetName = path.toString().replace(source,target);

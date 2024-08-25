@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 
 /**
- * @author YueYue
+ * @author yueyue
  */
 @Component
 @Slf4j

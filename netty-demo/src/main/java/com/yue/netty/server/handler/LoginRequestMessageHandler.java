@@ -18,8 +18,8 @@ public class LoginRequestMessageHandler extends SimpleChannelInboundHandler<Logi
         boolean login = UserServiceFactory.getUserService().login(username, password);
         LoginResponseMessage message;
         if (login) {
-            SessionFactory.getSession().bind(ctx.channel(), username);
             message = new LoginResponseMessage(true, "登录成功");
+            SessionFactory.getSession().bind(ctx.channel(), username);
         } else {
             message = new LoginResponseMessage(false, "用户名或密码不正确");
         }

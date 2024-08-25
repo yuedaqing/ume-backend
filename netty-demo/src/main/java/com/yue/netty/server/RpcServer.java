@@ -1,7 +1,7 @@
 package com.yue.netty.server;
 
 
-import com.yue.netty.protocol.MessageCodecSharable;
+import com.yue.netty.codec.MessageCodecSharable;
 import com.yue.netty.protocol.ProcotolFrameDecoder;
 import com.yue.netty.server.handler.RpcRequestMessageHandler;
 import io.netty.bootstrap.ServerBootstrap;

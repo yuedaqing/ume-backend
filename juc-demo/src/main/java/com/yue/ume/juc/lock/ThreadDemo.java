@@ -1,7 +1,7 @@
 package com.yue.ume.juc.lock;
 
 /**
- * @author YueYue
+ * @author yueyue
  */
 public class ThreadDemo {
     public static void main(String[] args) {

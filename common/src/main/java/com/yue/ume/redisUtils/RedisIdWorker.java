@@ -8,7 +8,7 @@ import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 
 /**
- * @author YueYue
+ * @author yueyue
  */
 @Component
 public class RedisIdWorker {

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author YueYue
+ * @author yueyue
  */
 @RestController
 @RequestMapping("/video")

@@ -2,7 +2,7 @@ package com.yue.ume.redis;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yue.ume.model.domain.User;
+import com.yue.ume.model.entity.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,7 +27,7 @@ public class RedisStringTest {
     void test() throws JsonProcessingException {
         List<User> users = new ArrayList<>();
         User user = new User();
-        user.setUserName("杨幂");
+        user.setUserName("yueyue");
         user.setUserAccount("1878888888");
         users.add(user);
         //手动序列化

@@ -1,7 +1,7 @@
 package com.yue.ume.proxy;
 
 /**
- * @author YueYue
+ * @author yueyue
  */
 public interface PayService {
     String callBack(String name);

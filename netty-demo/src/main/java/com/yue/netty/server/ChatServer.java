@@ -1,7 +1,7 @@
 package com.yue.netty.server;
 
 
-import com.yue.netty.protocol.MessageCodecSharable;
+import com.yue.netty.codec.MessageCodecSharable;
 import com.yue.netty.protocol.ProcotolFrameDecoder;
 import com.yue.netty.server.handler.*;
 import io.netty.bootstrap.ServerBootstrap;
@@ -41,12 +41,9 @@ public class ChatServer {
             serverBootstrap.childHandler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 protected void initChannel(SocketChannel ch) throws Exception {
-                    ch.pipeline().addLast(new ProcotolFrameDecoder());
-                    ch.pipeline().addLast(LOGGING_HANDLER);
-                    ch.pipeline().addLast(MESSAGE_CODEC);
                     // 用来判断是不是 读空闲时间过长，或 写空闲时间过长
                     // 5s 内如果没有收到 channel 的数据，会触发一个 IdleState#READER_IDLE 事件
-                    ch.pipeline().addLast(new IdleStateHandler(5, 0, 0));
+                    ch.pipeline().addLast(new IdleStateHandler(60, 0, 0));
                     // ChannelDuplexHandler 可以同时作为入站和出站处理器
                     ch.pipeline().addLast(new ChannelDuplexHandler() {
                         // 用来触发特殊事件
@@ -60,6 +57,9 @@ public class ChatServer {
                             }
                         }
                     });
+                    ch.pipeline().addLast(new ProcotolFrameDecoder());
+                    ch.pipeline().addLast(LOGGING_HANDLER);
+                    ch.pipeline().addLast(MESSAGE_CODEC);
                     ch.pipeline().addLast(LOGIN_HANDLER);
                     ch.pipeline().addLast(CHAT_HANDLER);
                     ch.pipeline().addLast(GROUP_CREATE_HANDLER);

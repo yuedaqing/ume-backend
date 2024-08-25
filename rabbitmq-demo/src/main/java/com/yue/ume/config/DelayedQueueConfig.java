@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author YueYue
+ * @author yueyue
  * 延迟队列配置
  */
 @Configuration

@@ -3,7 +3,7 @@ package com.yue.ume.annotation;
 import org.springframework.stereotype.Component;
 
 /**
- * @author YueYue
+ * @author yueyue
  */
 @Component
 public @interface VideoAnnotation {

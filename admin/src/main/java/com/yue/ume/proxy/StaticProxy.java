@@ -1,7 +1,7 @@
 package com.yue.ume.proxy;
 
 /**
- * @author YueYue
+ * @author yueyue
  */
 public class StaticProxy implements PayService{
     private PayService payService;

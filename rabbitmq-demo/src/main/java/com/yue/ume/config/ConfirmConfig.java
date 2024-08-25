@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author YueYue
+ * @author yueyue
  * 配置类 发布确认（高级——尚硅谷）
  */
 @Configuration
