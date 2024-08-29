@@ -32,4 +32,4 @@
             @       @        @@              @@       @       @
              @@@@@@@             @@@@@@@@@@             @@@@@@
 
-                                                  --by http://www.github.com/yuedaqing
+                                                  --by https://www.github.com/yuedaqing
